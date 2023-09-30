@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="app.css">
 </head>
+
 <body>
-    <script src="app.js"></script>
+    <header class="heading">
+        <h1>Tic Tac Toe</h1>
+    </header>
+
+    <div class="outerContainer blur">
+        <div class="scoreBoard">
+            <div class="p1 score">Sharl</div>
+            <div class="p2 score">Dan</div>
+        </div>
+        <div class="gameContainer">
+            <div class="gameBoard">
+                <div data-index-number="1"></div>
+                <div data-index-number="2"></div>
+                <div data-index-number="3"></div>
+                <div data-index-number="4"></div>
+                <div data-index-number="5"></div>
+                <div data-index-number="6"></div>
+                <div data-index-number="7"></div>
+                <div data-index-number="8"></div>
+                <div data-index-number="9"></div>
+            </div>
+            <button class="reset">Reset</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Bharath</p>
+    </footer>
+   
+
+    <div class="declareWinner">
+        <p>Player 1 wins</p>
+    </div>
+    <div class="getInformation">
+        <form action="">
+            <div>
+                <label for="player1">Player 1</label>
+                <input type="text" id="player1" placeholder="Enter the name" required>
+            </div>
+            <div>
+                <label for="player2">Player 2</label>
+                <input type="text" id="player2" placeholder="Enter the name" required>
+            </div>
+            <div><button class="start">Start</button></div>
+        </form>
+    </div>
+    <script type="module" src="index.js"></script>
 </body>
+
 </html>

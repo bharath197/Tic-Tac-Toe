@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@500&display=swap');
+
+:root {
+    --board-length: 25rem;
+    --box-length: calc(var(--board-length) / 3)
+}
+
+body{
+    position: relative;
+    font-family: 'Poppins';
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 0;
+    margin: 0;
+}
+
+header, footer{
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #457b9d;
+    box-sizing: border-box;
+}
+
+button{
+    padding: 4px 12px;
+    background-color: #f38375;
+    border: 0.5px solid white;
+    color: white;
+    font-family: 'Poppins';
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.outerContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0;
+    gap: 10px;
+}
+
+.gameBoard {
+    background-color: #457b9d;
+    border: 0.5px solid white;
+    width: var(--board-length);
+    height: var(--board-length);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gameBoard>div {
+    width: var(--box-length);
+    height: var(--box-length);
+    font-size: 3rem;
+    font-family: 'Poppins';
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 0.5px solid white;
+}
+
+.scoreBoard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5px;
+}
+.p1, .p2{
+    width: 12.5rem;
+    text-transform: uppercase;
+    background-color: #457b9d;
+    border: 0.5px solid white;
+    box-sizing: border-box;
+    text-align: center;
+    color: aliceblue;
+    padding: 10px;
+}
+
+.highlight{
+    border: 1px solid #f38375;
+}
+
+.declareWinner{
+    font-family: 'Montserrat';
+    color: #f38375;
+    font-size: 2rem;
+    text-transform: uppercase;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    gap: 10px;
+    padding: 10px;
+}
+
+.declareWinner>*{
+    margin: 0;
+}
+
+.blur{
+    pointer-events: none;
+    filter: blur(5px);
+}
+
+.getInformation>form{
+    font-family: 'Montserrat';
+    color: #f38375;
+    text-transform: uppercase;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+form>div{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+form>div:last-of-type{
+    display: flex;
+    justify-content: center;
+}
